@@ -1,0 +1,78 @@
+:root {
+  --primaryLightColor: #d4e6a5;
+  --primaryColor: #476a2e;
+  --primaryDarkColor: #c02c03;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBackground: #f1f5f8;
+  --mainOverlay: rgba(35, 10, 36, 0.4);
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #afafaf;
+  --mainRed: #bd0303;
+  --mainTransition: all 0.5s linear;
+  --mainSpacing: 0.3rem;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --mainBorderRadius: 0.50rem;
+  --smallWidth: 85vw;
+  --maxWidth: 40rem;
+  --fullWidth: 1170px;
+}
+
+img{
+    display: block;
+    width:100%;
+    height: 20rem;
+}
+.middle h2{
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+.middle{
+    margin:30px;
+}
+.whole{
+    margin-top: 20px;
+    margin:auto;
+    justify-items: center;
+    width:100%
+}
+
+.card{
+    display:grid;
+    margin-left:10rem;
+    margin-right: 10rem;
+    grid-template-columns: auto auto auto;
+    gap:20px;
+    justify-items: center; 
+}
+.cardinner{
+    display:table;
+    margin-bottom: 10px var(--primaryDarkColor);
+    background-color:rgb(255, 254, 252);
+    /* background: yellowgreen; */
+    margin: auto;
+    padding:0.7rem;
+    box-shadow:var(--lightShadow);
+    border-radius: var(--mainBorderRadius);
+    transition: var(--mainTransition);
+    height: 100%;
+    width: 100%;
+}
+h2{
+    font-size: large;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+}
+h4{
+    margin-left: 0.5rem;
+}
+
+.cardinner:hover {
+  box-shadow: var(--darkShadow);
+}
+.card h2,h4{
+    text-align: left;
+}
