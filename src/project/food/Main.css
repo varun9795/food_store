@@ -37,7 +37,8 @@ img{
     margin-top: 20px;
     margin:auto;
     justify-items: center;
-    width:100%
+    width:100%;
+    margin-bottom: 1.5rem;
 }
 
 .card{
@@ -61,8 +62,8 @@ img{
     height: 100%;
     width: 100%;
 }
-h2{
-    font-size: large;
+.card h2{
+    font-size: 30px;
     margin-top: 1rem;
     margin-left: 0.5rem;
 }
@@ -76,3 +77,5 @@ h4{
 .card h2,h4{
     text-align: left;
 }
+
+

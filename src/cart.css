@@ -1,0 +1,28 @@
+.heading{
+    height:3rem;
+    background-color:rgb(121, 138, 138) ;
+    margin-top:1rem;
+    box-shadow: 2px 2px #888888;
+
+}
+
+.heading h1{
+    text-align:left;
+    font-size: x-large;
+    color: black;
+    padding-left:1.5rem ;
+    padding-top: 0.5rem;
+}
+
+.cartitem{
+    display:flex;
+    flex-direction: column;
+
+}
+
+
+
+.cartitem img{
+    height:50%;
+    width:50%
+}

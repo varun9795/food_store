@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className="topic">About Us</div>
                 <p>HEllo everyone, Welcome you to  VArun and Anjali travels if u are planning a vacation u are landing at right place.</p>
             </div>
-            <div className="middle">
+            <div className="mid">
                 <div className="topic">Contact Us</div>
                 <p>999999999</p>
             </div>

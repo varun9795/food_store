@@ -36,14 +36,12 @@ li a {
 li a:hover {
     background-color:darkgrey;
 }  
-img{
-     height: 200px;
-     width:100%;
-} 
+
 
 .navbar{
-    background-color:rgb(203, 209, 209);
+    /* background-color:rgb(203, 209, 209); */
     border-bottom: 2px solid #476a2e;
     box-shadow: 5px 5px #888888;
-    height: 5rem;
+    height: 15rem;
+    background-image: url("https://unsplash.com/photos/gnbW4pajbI8/download?force=true&w=2400");
 }

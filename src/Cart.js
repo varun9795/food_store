@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react';
 import {connect} from 'react-redux';
 import {removeFromCart} from './redux/Food/food-actions';
 import Header from './project/food/header';
+import "./cart.css"
 
 const Cart=({cart,removeFromCart})=>{
     const [total,setTotal]=useState(0);
@@ -13,9 +14,14 @@ const Cart=({cart,removeFromCart})=>{
        setTotal(price);
     },[cart,total,setTotal])
     return<>
-        <Header/>
-        <h1>Cart-Items</h1>
-        <h4>Total Amount: {total} rs.</h4>
+        <Header />
+        <div className="cart">
+            <section className="heading">
+                <h1>Items in your Cart({cart.length}) </h1>
+            </section>
+
+
+          <h4>Total Amount: {total} rs.</h4>
         {
             cart.map((cItem)=>{
                 return <>
@@ -31,7 +37,8 @@ const Cart=({cart,removeFromCart})=>{
                 </>
             })
             
-        }
+            }
+            </div>
     </>
 }
 const mapDispatchToProps=dispatch=>{
