@@ -34,7 +34,7 @@ img{
     margin:30px;
 }
 .whole{
-    margin-top: 20px;
+    margin-top:2rem;
     margin:auto;
     justify-items: center;
     width:100%;
@@ -45,6 +45,7 @@ img{
     display:grid;
     margin-left:10rem;
     margin-right: 10rem;
+    margin-top: 2rem;
     grid-template-columns: auto auto auto;
     gap:20px;
     justify-items: center; 
@@ -63,12 +64,13 @@ img{
     width: 100%;
 }
 .card h2{
-    font-size: 30px;
+    font-size: 23px;
     margin-top: 1rem;
     margin-left: 0.5rem;
 }
-h4{
+h4,h5{
     margin-left: 0.5rem;
+    font-family:'cursive';
 }
 
 .cardinner:hover {
@@ -77,5 +79,18 @@ h4{
 .card h2,h4{
     text-align: left;
 }
+.cardinner header{
+    display:flex;
+    justify-content:space-between;
+    /* border-bottom:0.5px dotted gray; */
+}
 
+.whole h2{
+    text-align: center;
+    margin-top: 2rem;
+}
 
+.cardinner img{
+    border: none;
+
+}

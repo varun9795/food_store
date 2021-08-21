@@ -179,7 +179,7 @@ p {
   border-radius: var(--radius);
   border-color: transparent;
   text-transform: capitalize;
-  font-size: 1rem;
+  font-size: 0.75rem;
   cursor: pointer;
   float: right;
   padding: 0.5rem;

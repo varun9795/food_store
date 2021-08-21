@@ -1,3 +1,54 @@
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --max-width: 1170px;
+  --fixed-width: 450px;
+  --clr-orange-1: hsl(12, 83%, 98%);
+  --clr-orange-2: hsl(14, 91%, 95%);
+  --clr-orange-3: hsl(12, 89%, 89%);
+  --clr-orange-4: hsl(13, 87%, 82%);
+  --clr-orange-5: hsl(13, 88%, 68%);
+  --clr-orange-6: hsl(13, 88%, 55%);
+  --clr-orange-7: hsl(13, 74%, 49%);
+  --clr-orange-8: hsl(13, 74%, 33%);
+  --clr-orange-9: hsl(13, 73%, 25%);
+  --clr-orange-10: hsl(13, 73%, 16%);
+}
+
 .heading{
     height:3rem;
     background-color:rgb(121, 138, 138) ;
@@ -7,22 +58,89 @@
 }
 
 .heading h1{
-    text-align:left;
+    text-align:center;
     font-size: x-large;
     color: black;
     padding-left:1.5rem ;
     padding-top: 0.5rem;
 }
 
-.cartitem{
+.cart-item{
     display:flex;
-    flex-direction: column;
+    margin-left: 1rem;
+    column-gap:18rem;
 
 }
 
+.outer{
+    display: flex;
+    margin-left:7rem;
+    column-gap:11rem;
+    border-bottom:0.5px dotted #cbd6ad;
+    margin-top: 1rem;
+}
+
+.iconn i{
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 43px;
+  border-radius: 5px;
+  border: 2px solid #222222;
+  margin: 30px 5px 0 0;
+  transition: all 0.3s ease;
+  color: black;
+}
+
+.cart span{
+    display:flex;
+    margin-top: 1rem;;
+    margin-left:8rem;
+    margin-right:3rem;
+    justify-content: space-between;
+    border-bottom:1px solid #23203b; 
+
+}
+
+.cart h4{
+  font-size: large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.cart-img{
+    object-fit: cover;
+    height:150px;
+    width:150px;
+}
+
+.imgtitle h4{
+    text-align: center;
+}
 
 
-.cartitem img{
-    height:50%;
-    width:50%
+.total h4{
+    margin-top: 1rem;
+    margin-left:81%;
+}
+
+.btnn {
+  /* display: inline-block; */
+  background: var(--clr-primary-5);
+  color:whitesmoke;
+  background-color:#2C2E43;
+  border-radius: var(--radius);
+  border-color: transparent;
+  text-transform: capitalize;
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+  margin-left:87%;
+  margin-bottom:2rem;
+
+}
+.btnn:hover {
+  background: var(--clr-primary-1);
 }

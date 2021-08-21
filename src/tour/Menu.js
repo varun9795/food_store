@@ -37,7 +37,7 @@ const Menu=({products,addToCart})=>{
                    <div className="item-info">
                      <header>    
                        <h4>{title}</h4>
-                       <h4 className="price">rs {price}</h4>
+                       <h4 className="price">Rs.{price}</h4>
                      </header>    
                        <p>{info}</p>
                        <button className="btn" onClick={()=>addToCart(id)}>Add Item</button>
