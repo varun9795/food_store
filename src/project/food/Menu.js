@@ -2,9 +2,9 @@ import React,{useState} from 'react';
 // import Menudata from './Menudata';
 import Category from './Category';
 import './Menu.css';
-import {addToCart} from '../redux/Food/food-actions';
+import {addToCart} from '../../redux/Food/food-actions';
 import {connect} from 'react-redux';
-import Header from '../project/food/header';
+import Header from './header';
 
 const Menu=({products,addToCart})=>{
     console.log(products);
@@ -37,7 +37,7 @@ const Menu=({products,addToCart})=>{
                    <div className="item-info">
                      <header>    
                        <h4>{title}</h4>
-                       <h4 className="price">Rs.{price}</h4>
+                       <h4 className="price">rs {price}</h4>
                      </header>    
                        <p>{info}</p>
                        <button className="btn" onClick={()=>addToCart(id)}>Add Item</button>
