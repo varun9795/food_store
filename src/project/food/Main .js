@@ -1,32 +1,45 @@
-import React, { useState } from 'react'
+import React, { useEffect} from 'react'
 import "./Main.css";
 import Header from './header';
 import Footer from './Footer';
-import {connect} from 'react-redux';
+import {useSelector,useDispatch,connect} from 'react-redux';
 import { addToCart } from '../../redux/Food/food-actions';
-import {items} from '../../redux/Food/food-reducer'
+import {getProducts as listProducts} from '../../redux/Food/productActions'
 
 
-const Main = ({ items,addToCart }) => {
+const Main = ({ addToCart }) => {
+    
+    const dispatch = useDispatch();
+    const getProducts = useSelector(state => state.getProducts);
+     
+    const { products, loading, error } = getProducts;
+    
+    useEffect(() => {
+        dispatch(listProducts())
+    },[dispatch])
+
     return <>
       <div className="frame">
         <Header/>
             <section className="whole">
                  <h2>COMBOS AND OFFERS</h2>
                 <div className="card">
-                {items.map((item) =>{
-                    const { id, img,title,category,price,info} = (item);
-                    if (id<= 10){
-                         return <>
-                            <div className="cardinner">
+                    {loading ?
+                        <h2>Loading...</h2> : error ?
+                            <h2>{error}</h2> :
+                          products.map((item) =>{
+                          const {_id,id, img,title,price,info} = (item);
+                            if (id<= 15){
+                            return <>
+                                <div className="cardinner">
                                  <img src={img} alt={id} />
                                  <header>
                                  <h2>{title}</h2>
                                  <h2 className="price">Rs.{price}</h2>
                                  </header>
                                  <h5>{info}</h5>
-                                
-                                <button className="btn" onClick={() => { addToCart(id) }}>ADD TO CART</button>
+                                    <button className="btn" onClick={() => { addToCart(_id) }}> ADD TO CART</button>
+                    
                         </div>
                         </>
                        }
@@ -44,10 +57,11 @@ const mapDispatchToProps=dispatch=>{
         addToCart:(id)=>dispatch(addToCart(id)),
     }
 }
-const mapStateToProps = state =>
-{
-    return {
-        items: state.food.product,
-    }
-    }
-export default connect(mapStateToProps,mapDispatchToProps)(Main);
+// const mapStateToProps = state =>
+// {
+//     return {
+//         items: state.food.product,
+//     }
+//     }
+
+export default connect(null,mapDispatchToProps)(Main);

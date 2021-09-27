@@ -1,13 +1,22 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 // import Menudata from './Menudata';
 import Category from './Category';
 import './Menu.css';
-import {addToCart} from '../../redux/Food/food-actions';
-import {connect} from 'react-redux';
+import {useSelector,useDispatch,connect} from 'react-redux';
+import { addToCart } from '../../redux/Food/food-actions';
+import {getProducts as listProducts} from '../../redux/Food/productActions'
 import Header from './header';
 
-const Menu=({products,addToCart})=>{
-    console.log(products);
+const Menu=({addToCart})=>{
+    const dispatch = useDispatch();
+    const getProducts = useSelector(state => state.getProducts);
+    useEffect(() => {
+        dispatch(listProducts())
+    },[dispatch])
+     
+    const { products, loading, error } = getProducts;
+
+
     const [items,setItems]=useState(products);
     const allCategories=['All',...new Set(products.map((item)=>{return item.category}))];
     const filterItems=(category)=>{
@@ -29,18 +38,21 @@ const Menu=({products,addToCart})=>{
                 <Category allCategories={allCategories} filterItems={filterItems}/>
             </div>
             <div className="food">
-               {items.map((item)=>{
-                   const {id,img,title,price,info}=item;
+                {loading ?
+                        <h2>Loading...</h2> : error ?
+                            <h2>{error}</h2> :
+                 items.map((item)=>{
+                   const {_id,img,title,price,info}=item;
                    return<>
-                   <article key={id} className="menu-item">
+                   <article key={_id} className="menu-item">
                        <img src={img} alt="varun"/>
                    <div className="item-info">
                      <header>    
                        <h4>{title}</h4>
-                       <h4 className="price">rs {price}</h4>
+                       <h4 className="price">Rs. {price}</h4>
                      </header>    
                        <p>{info}</p>
-                       <button className="btn" onClick={()=>addToCart(id)}>Add Item</button>
+                       <button className="btn" onClick={()=>addToCart(_id)}>Add Item</button>
                        </div>  
                    </article></>
                })}
@@ -56,9 +68,5 @@ const mapDispatchToProps=dispatch=>{
     }
 }
 
-const mapStateToProps=state=>{
-    return{
-        products:state.food.product,
-    };
-}
-export default connect(mapStateToProps,mapDispatchToProps)(Menu);
+
+export default connect(null,mapDispatchToProps)(Menu);

@@ -2,10 +2,10 @@ import React, { useState ,useEffect} from 'react';
 import "./header.css";
 import {Link} from "react-router-dom";
 import { connect } from 'react-redux';
-import { Carousel } from 'react-responsive-carousel';
 
 
-const Header=({cart}) => {
+
+const Header=({cartItems}) => {
     const time= new Date().toLocaleTimeString();
     const [ctime,setCtime]=useState(time);
     const handler=()=>{
@@ -18,11 +18,11 @@ const Header=({cart}) => {
     
     useEffect(()=>{
         let count = 0;
-        cart.forEach((item) => {
+        cartItems.forEach((item) => {
            count+= item.qty;
         })
         setLen(count);
-    },[cart,len,setLen])
+    },[cartItems,len,setLen])
 
     return <>
         <section className="navbar">
@@ -41,7 +41,7 @@ const Header=({cart}) => {
 }
 const mapStateToProps=state=>{
     return{
-        cart:state.food.cart,
+        cartItems:state.food.cartItems,
     };
 }
 

@@ -1,12 +1,14 @@
 {
   "name": "reactapp",
   "version": "0.1.0",
+  "proxy": "http://127.0.0.1:5000",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
@@ -46,4 +48,3 @@
     "redux-devtools": "^3.7.0"
   }
 }
-
