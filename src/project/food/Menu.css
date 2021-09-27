@@ -1,10 +1,10 @@
 body{
     background-color: rgb(223, 230, 227);
 }
-img{
+.menu-img{
    /* object-fit: cover; */
-   height: 80px;
-   width: 80px;
+   height: 120px;
+   width: 150px;;
    border: 0.25rem solid #c59d5f;
    border-radius: 5px;
    display: block;
@@ -59,7 +59,7 @@ h1{
 }
 .menu-item{
     display:flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 70px;

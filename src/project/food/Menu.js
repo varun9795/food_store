@@ -45,7 +45,7 @@ const Menu=({addToCart})=>{
                    const {_id,img,title,price,info}=item;
                    return<>
                    <article key={_id} className="menu-item">
-                       <img src={img} alt="varun"/>
+                       <img className="menu-img" src={img} alt="varun"/>
                    <div className="item-info">
                      <header>    
                        <h4>{title}</h4>

@@ -25,12 +25,14 @@ const Header=({cartItems}) => {
     },[cartItems,len,setLen])
 
     return <>
-        <section className="navbar">
+        <section className="navbar-food">
         <ul className="links">
+        <div className="li-head">
         <li><Link to="/cart">Cart ({len})</Link></li>
         <li><Link to="/cart">Recipes</Link></li>
         <li><Link to="/menu">Menu</Link></li>
         <li><Link to="/">Home</Link></li>
+        </div>
         
         <span className="ctime">           
                     <h4 >{ctime}</h4>
