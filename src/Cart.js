@@ -57,7 +57,7 @@ const Cart=({removeFromCart})=>{
                         <h4>Rs.{cItem.price}</h4>
                         <div className="iconn" >
                         <h4>{cItem.qty}</h4>
-                        <a href="#" ><i className="fa fa-trash" onClick={()=>removeFromCart(cItem._id)}></i></a>
+                        <a href="#" ><i className="fa fa-trash" onClick={()=>removeFromCart(cItem.id)}></i></a>
                         </div>
                         <h4>Rs.{cItem.price * cItem.qty}</h4>
                     </div>

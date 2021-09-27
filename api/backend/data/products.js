@@ -9,7 +9,7 @@ const products = [
     },
     {
         id: 2,
-        img: "https://images.pexels.com/photos/357573/pexels-photo-357573.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6KXx8lAHmuivhTGItOH_P7n7NHEtTqwDGMQ&usqp=CAU",
         title: "Chole Bhature",
         category: "Breakfast",
         price: '110',
@@ -77,7 +77,7 @@ const products = [
         title: 'Sandwich',
         category: "Breakfast",
         price: '300',
-        info: 'vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats',
+        info: 'I know once people get connected to real food, they never change back',
     },
     
     {
@@ -86,7 +86,7 @@ const products = [
         title: 'Diner double',
         category: "Lunch",
         price: '400',
-        info: 'vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats',
+        info: 'I know once people get connected to real food, they never change back',
     },
     
     {
@@ -95,7 +95,7 @@ const products = [
         title: 'Oreo shake',
         category: "Shake",
         price: '200',
-        info: 'vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats',
+        info: 'I know once people get connected to real food, they never change back',
     },
     
     {
@@ -104,7 +104,7 @@ const products = [
         title: 'Paneer Naan',
         category: "Dinner",
         price: '200',
-        info: 'vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats',
+        info: 'I know once people get connected to real food, they never change back',
     },
     
     {
@@ -113,7 +113,7 @@ const products = [
         title: 'Burger',
         category: "Breakfast",
         price: '150',
-        info: 'vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats',
+        info: 'I know once people get connected to real food, they never change back',
     },
     {
         id: 106,
@@ -121,7 +121,7 @@ const products = [
         title: 'Chole Bhtaure',
         category: "Dinner",
         price: '200',
-        info: 'vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats',
+        info: 'I know once people get connected to real food, they never change back',
     },
     {
         id: 107,
@@ -129,7 +129,7 @@ const products = [
         title: 'Pizza',
         category: "Lunch",
         price: '200',
-        info: 'vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats',
+        info: 'I know once people get connected to real food, they never change back',
     },
     {
         id: 108,
@@ -137,7 +137,7 @@ const products = [
         title: 'Milk Shake',
         category: "Shake",
         price: '200',
-        info: 'vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats',
+        info: 'I know once people get connected to real food, they never change back',
     }, {
         id: 109,
    
@@ -145,7 +145,7 @@ const products = [
         title: 'Idli',
         category: "Dinner",
         price: '200',
-        info: 'vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats',
+        info: 'I know once people get connected to real food, they never change back',
     }
 ];
 

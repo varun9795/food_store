@@ -112,12 +112,13 @@
     object-fit: cover;
     height:150px;
     width:150px;
+    border: 0.25rem solid #c59d5f;
+    border-radius: 5px;
 }
 
 .imgtitle h4{
     text-align: center;
 }
-
 
 .total h4{
     margin-top: 1rem;
