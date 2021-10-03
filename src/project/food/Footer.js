@@ -7,11 +7,11 @@ const Footer = () => {
         <section className="footer">
             <div className="left">
                 <div className="topic">About Us</div>
-                <p>HEllo everyone, Welcome you to  VArun and Anjali travels if u are planning a vacation u are landing at right place.</p>
+                <p>Hello peeps, Welcome you to  A&V Food Corners if u are planning to have  yummy and delicious treat to your tummy... then definitely  You are landing at right place.</p>
             </div>
             <div className="mid">
                 <div className="topic">Contact Us</div>
-                <p>999999999</p>
+                <p>9625051074</p>
             </div>
             <div className="right">
                 <div className="topic">Subscribe Us</div>

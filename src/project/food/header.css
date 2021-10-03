@@ -4,10 +4,8 @@ ul{
     padding: 0;
     overflow: hidden;
 }
-li{
-    float: right;
-    color: black;
-}
+
+
   
 /* h4{
     text-align:center;
@@ -18,21 +16,34 @@ li{
 } */
 .ctime h4{
     color: black;
-    margin-left:8px;
-    margin-top: 15px;
-    text-align: left;
+    margin-top: 10px;
     font-weight: bold;
     font-style: italic;
 }
+
+.ctime{
+    margin-left:-20px;
+}
+
 li a {
     display: block;
     color:black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 13px;
     text-decoration: none;
     font-weight: bold;
 }
   
+.li-head{
+    display:flex;
+    justify-content: right;
+    float: right;
+    color: black;
+    margin-right: 2px;
+    font-size: 1.25rem;
+}
+
+
 li a:hover {
     background-color:darkgrey;
 }  
@@ -42,11 +53,71 @@ li a:hover {
     /* background-color:rgb(203, 209, 209); */
     border-bottom: 2px solid #476a2e;
     box-shadow: 5px 5px #888888;
-    height: 5rem;
-    /* background-image: url("https://unsplash.com/photos/-YHSwy6uqvk/download?force=true&w=2400"); */
+    height: 4rem;
+    margin-left: 0%;
 }
 
-Carousel{
-	position:relative;
-	z-index:1;
+.links{
+    display: flex;
+    justify-content: space-between; 
+    /* flex-direction: column-reverse; */
+}
+
+.upper-right{
+    display: flex;
+    gap:3px;
+    justify-content: right;
+    margin-right: 2px;
+}
+
+
+.cart_badge{
+    display: flex;
+     width:30px;
+     height:30px;
+     background: #dad4d4;
+     border-radius: 50%;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     font-size: 1.25rem;
+}
+
+.cart_design{
+    display: flex;
+    gap:2px;
+}
+
+.cart_design i{
+    align-items: center;
+    justify-content: center;
+    padding-top:5px;
+}
+
+.hamburger_menu{
+    width: 30px;
+    height:30px;
+    margin-top:1rem;
+    margin-right:0.5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hamburger_menu div{
+    width: 90%;
+    height: 2px;
+    background:black;
+}
+
+@media(max-width:960px){
+    .li-head{
+        display: none;
+    }
+
+    .hamburger_menu{
+        display:flex;
+    }
 }

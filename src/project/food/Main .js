@@ -32,7 +32,7 @@ const Main = ({ addToCart }) => {
                             <h2>{error}</h2> :
                           products.map((item) =>{
                           const {_id,id, img,title,price,info} = (item);
-                            if (id<= 15){
+                            if (id<= 10){
                             return <>
                                 <div className="cardinner">
                                  <img src={img} alt={id} />

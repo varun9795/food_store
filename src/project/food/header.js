@@ -26,17 +26,41 @@ const Header=({cartItems}) => {
 
     return <>
         <section className="navbar-food">
+
         <ul className="links">
-        <div className="li-head">
-        <li><Link to="/cart">Cart ({len})</Link></li>
-        <li><Link to="/cart">Recipes</Link></li>
-        <li><Link to="/menu">Menu</Link></li>
-        <li><Link to="/">Home</Link></li>
-        </div>
-        
+                
         <span className="ctime">           
                     <h4 >{ctime}</h4>
-                </span>
+        </span>
+            
+        
+        
+        <div className="upper-right">
+                
+        <div className="li-head">
+           
+            {/* <li><Link to="/cart">Recipes</Link></li>  */}
+           
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/menu">Menu</Link></li>
+            <li><Link to="/cart" className="cart_design">
+                <i className="fas fa-shopping-cart"></i>
+                Cart
+                <span className="cart_badge">{len}</span>
+            </Link></li>
+        </div>
+                
+       <div className="hamburger_menu">
+                    <div></div>
+                    <div></div>
+
+                    <div></div>
+        
+        </div>
+
+        </div>
+        
+       
         </ul>
         </section>
         </>

@@ -4,9 +4,14 @@ import {removeFromCart} from './redux/Food/food-actions';
 import Header from './project/food/header';
 import "./cart.css"
 import Footer from './project/food/Footer'
-import { useDispatch,useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import {useHistory} from "react-router-dom";
 
-const Cart=({removeFromCart})=>{
+const Cart = ({ removeFromCart }) => {
+    
+    
+  const history = useHistory();
+
     const [total, setTotal] = useState(0);
     const [len, setLen] = useState(0);
 
@@ -27,51 +32,88 @@ const Cart=({removeFromCart})=>{
     return <>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
         <Header />
-        <div className="cart">
-            <section className="heading">
-                <h1>Items in your Cart({len}) </h1>
-            </section>
-             <span>
-                <h4>Item</h4>
-                <h4>Price</h4>
-                <h4>Qty</h4>
-                <h4>Subtotal</h4>
-                        
-            </span>
-
-            {
-                
-                cartItems.map((cItem) => {
-                    console.log(cItem)
-                    console.log("hello");
-                    console.log(cItem.title);
-                return <>
-                    
-                    <div className="outer">
-                    <div className="imgtitle">
-                        <img className="cart-img" src={cItem.img} alt="varun" />
-                            <h4>{cItem.title}</h4>
-                    </div>
-                        {/* <div className="title-price"> */}
-                    <div className="cart-item">
-                        <h4>Rs.{cItem.price}</h4>
-                        <div className="iconn" >
-                        <h4>{cItem.qty}</h4>
-                        <a href="#" ><i className="fa fa-trash" onClick={()=>removeFromCart(cItem.id)}></i></a>
+        {
+            len > 0 ?
+                <div className="cart">
+                    <section className="heading">
+                        <h1>Items in your Cart({len}) </h1>
+                    </section>
+                    <div className="row">
+                    <div className="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+                    <div className="table-responsive">
+                        <table class="table">
+                         <thead>
+                        <tr>
+                        <th scope="col" class="border-0 bg-light">
+                            <div class="p-2 px-3 text-uppercase">Item</div>
+                        </th>
+                        <th scope="col" class="border-0 bg-light">
+                            <div class="py-2 text-uppercase">Price</div>
+                        </th>
+                        <th scope="col" class="border-0 bg-light">
+                            <div class="py-2 text-uppercase">Quantity</div>
+                        </th>
+                        <th scope="col" class="border-0 bg-light">
+                            <div class="py-2 text-uppercase">Subtotal</div>
+                        </th>
+                        <th scope="col" class="border-0 bg-light">
+                            <div class="py-2 text-uppercase">Remove</div>
+                        </th>
+                        </tr>
+                    </thead>
+                     {
+                            cartItems.map((cItem) => {
+                        return <>
+                        <tbody>
+                                <tr>
+                                  <th scope="row" className="border-0">
+                                   <div className="p-2">
+                                    <img src={cItem.img} alt=""  class="img-fluid rounded shadow-sm"/>
+                                    <div class="ml-3 d-inline-block align-middle">
+                                       <h5 class="mb-0">{cItem.title}</h5>
+                                   </div>
+                                  </div>
+                                  </th>
+                                    <td class="border-0 align-middle">
+                                        <h4>{cItem.price}</h4></td>
+                                            <td class="border-0 align-middle" >
+                                              <h4>{cItem.qty}</h4>
+                                             </td>
+                                            <td class="border-0 align-middle">
+                                                <h4>Rs.{cItem.price * cItem.qty}</h4>
+                                    </td>
+                                    <td class="border-0 align-middle" >
+                                        <a href="#"  className="iconn"><i className="fa fa-trash" onClick={() => removeFromCart(cItem.id)}></i></a>
+                                    </td>
+                                       
+                          </tr>
+                          </tbody>
+                                </>
+                            })
+                        }
+                        </table>
                         </div>
-                        <h4>Rs.{cItem.price * cItem.qty}</h4>
-                    </div>
+                        </div>
+                        </div>
+                    <div className="totalprice">
+                        <div className="inner-total">
+                        <h4>Total Amount: Rs.{total}</h4>
+                        <button className="bttnn" onClick={()=>alert("THANKYOU")}>Proceed to Pay</button>
+                        </div>
+                        </div>
+                </div>
+                : <>
+                    <div className="empty-cart">
+        
+                        <img className="empty-cart-img" src="https://chillydraji.files.wordpress.com/2015/08/empty_cart.jpeg?w=300&h=221" alt="" />
+                        <h2>Oops!!! Your Cart is Empty</h2>
+                        <button className="bttnn" onClick={() =>history.push('/menu')}> ADD ITEM</button>
                     </div>
                 </>
-            })
-            
         }
-            <div className="total">
-                <h4>Total Amount: Rs.{total}</h4>
-                <button className="btnn" onClick={()=>alert("THANKYOU")}>Proceed to Pay</button>
-            </div>
+               
             
-        </div>
+
         <Footer />
         
     </>

@@ -9,7 +9,7 @@ const products = [
     },
     {
         id: 2,
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6KXx8lAHmuivhTGItOH_P7n7NHEtTqwDGMQ&usqp=CAU",
+        img: "https://wallpapercave.com/wp/wp9199690.jpg",
         title: "Chole Bhature",
         category: "Breakfast",
         price: '110',
@@ -17,7 +17,7 @@ const products = [
     },
     {
         id: 3,
-        img: "https://unsplash.com/photos/PLyJqEJVre0/download?force=true&w=1920",
+        img: "https://images8.alphacoders.com/654/thumbbig-654855.webp",
         title: "Pan Cake",
         category: "Breakfast",
         price: '500',
@@ -25,8 +25,8 @@ const products = [
     },
     {
         id: 4,
-        img: "https://images.pexels.com/photos/2679501/pexels-photo-2679501.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        title: "Chole",
+        img: "https://wallpapercave.com/wp/wp6734913.jpg",
+        title: "Dosa",
         category: "Lunch",
         price: '50',
         info: "I know once people get connected to real food, they never change back."
@@ -47,14 +47,7 @@ const products = [
         price: '150',
         info: "I know once people get connected to real food, they never change back."
     },
-    {
-        id: 7,
-        img: "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        title: "Burger",
-        category: "Dinner",
-        price: '80',
-        info: "I know once people get connected to real food, they never change back."
-    },
+   
     {
         id: 8,
         img: "https://images.pexels.com/photos/4078047/pexels-photo-4078047.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -117,9 +110,9 @@ const products = [
     },
     {
         id: 106,
-        img: "https://akm-img-a-in.tosshub.com/sites/pakwangali/images/stories/072015/chole_bhature_pakwan_520_070815033739.jpg?size=482:325",
-        title: 'Chole Bhtaure',
-        category: "Dinner",
+        img: "https://thumbs.dreamstime.com/b/samosa-27550190.jpg",
+        title: 'Samosa',
+        category: "Breakfast",
         price: '200',
         info: 'I know once people get connected to real food, they never change back',
     },

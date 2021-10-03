@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from 'react';
-// import Menudata from './Menudata';
 import Category from './Category';
 import './Menu.css';
 import {useSelector,useDispatch,connect} from 'react-redux';
@@ -37,16 +36,17 @@ const Menu=({addToCart})=>{
             <div>
                 <Category allCategories={allCategories} filterItems={filterItems}/>
             </div>
-            <div className="food">
+            <div className="food-grid">
                 {loading ?
                         <h2>Loading...</h2> : error ?
                             <h2>{error}</h2> :
                  items.map((item)=>{
                    const {_id,img,title,price,info}=item;
                    return<>
-                   <article key={_id} className="menu-item">
+                       <article key={_id} className="menu-item">
+                           
                        <img className="menu-img" src={img} alt="varun"/>
-                   <div className="item-info">
+                       <div className="item-info">
                      <header>    
                        <h4>{title}</h4>
                        <h4 className="price">Rs. {price}</h4>
