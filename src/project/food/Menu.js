@@ -27,10 +27,9 @@ const Menu=({addToCart})=>{
         setItems(newItems);
     }
     return<>
-        <Header/>
         <section>
             <div>
-                <h1>Our Menu</h1>
+                <h1 style={{marginTop:15}}>Our Menu</h1>
                 <div className="underline"></div>
             </div>
             <div>

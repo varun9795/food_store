@@ -156,7 +156,6 @@ span h4{
   width: 250px;
 }
 
-
 .totalprice h4{
     display: block;
     font-size:1.25rem;
@@ -231,8 +230,8 @@ span h4{
   margin-top:2rem;
 }
 
-@media (max-width:500px) {
-
+@media (max-width:480px) {
+  
   .p-2 img{
     height:100px;
     width:100px;

@@ -1,0 +1,19 @@
+.sideDrawer{
+    width: 40%;
+    height: 100vh;
+    background: #fff;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:200;
+    transform: translate(-100%);
+    transition: all 0.3s ease-out;
+}
+
+.sideDrawer.show{
+    transform: translateX(0);
+}
+
+.sideDrawer_links{
+    padding-left: 0;
+}
