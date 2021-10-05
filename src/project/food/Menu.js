@@ -29,7 +29,7 @@ const Menu=({addToCart})=>{
     return<>
         <Header/>
         <section>
-            <div>
+            <div className="page_heading">
                 <h1>Our Menu</h1>
                 <div className="underline"></div>
             </div>

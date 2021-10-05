@@ -138,7 +138,7 @@ span h4{
     padding-right: 30px;
     padding-left: 15px;
     background-color: #fff;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
   .iconn i{
@@ -231,11 +231,19 @@ span h4{
   margin-top:2rem;
 }
 
+@media (max-width:800px) {
+
+  .p-2 img{
+    height:110px;
+    width:110px;
+}
+}
+
 @media (max-width:500px) {
 
   .p-2 img{
-    height:100px;
-    width:100px;
+    height:90px;
+    width:90px;
 }
 
 .empty-cart h2{

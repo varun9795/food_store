@@ -17,10 +17,12 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
-h1{
+.page_heading h1{
     text-align: center;
     font-size: 40px;
     margin-bottom: 5px;
+    margin-top:1rem;
+
 }
 .filter-btn{
     background:transparent;
@@ -39,6 +41,7 @@ h1{
     background:#c59d5f;
     color:white;
   }
+  
 .ctg{
     text-align:center;
     margin-top:20px;

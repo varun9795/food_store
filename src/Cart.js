@@ -38,8 +38,7 @@ const Cart = ({ removeFromCart }) => {
                     <section className="heading">
                         <h1>Items in your Cart({len}) </h1>
                     </section>
-                    <div className="row">
-                    <div className="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+                    <div className="col-lg-12 p-5 bg-white rounded shadow-sm mb-4">
                     <div className="table-responsive">
                         <table class="table">
                          <thead>
@@ -75,7 +74,7 @@ const Cart = ({ removeFromCart }) => {
                                   </div>
                                   </th>
                                     <td class="border-0 align-middle">
-                                        <h4>{cItem.price}</h4></td>
+                                        <h4>Rs.{cItem.price}</h4></td>
                                             <td class="border-0 align-middle" >
                                               <h4>{cItem.qty}</h4>
                                              </td>
@@ -93,7 +92,7 @@ const Cart = ({ removeFromCart }) => {
                         }
                         </table>
                         </div>
-                        </div>
+                
                         </div>
                     <div className="totalprice">
                         <div className="inner-total">
