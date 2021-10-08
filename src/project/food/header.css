@@ -1,8 +1,16 @@
+
+.navbar-food{
+    position:sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
 ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    
 }
 
 
@@ -39,6 +47,7 @@ li a {
     justify-content: right;
     float: right;
     color: black;
+    margin-top: 1.1rem;
     margin-right: 2px;
     font-size: 1.25rem;
 }
@@ -51,16 +60,21 @@ li a:hover {
 
 .navbar-food{
     /* background-color:rgb(203, 209, 209); */
-    border-bottom: 2px solid #476a2e;
-    box-shadow: 5px 5px #888888;
-    height: 4rem;
-    margin-left: 0%;
+    border-bottom: 1px solid #585e54;
+    box-shadow: 4px 4px #888888;
+    background:#f1f5f8;
+    height: 6rem;
+    margin-left: 0%;    
 }
 
 .links{
     display: flex;
     justify-content: space-between; 
     /* flex-direction: column-reverse; */
+}
+
+.logo_va{
+  margin-left: 10rem;
 }
 
 .upper-right{
@@ -106,6 +120,7 @@ li a:hover {
     cursor: pointer;
 }
 
+
 .hamburger_menu div{
     width: 90%;
     height: 2px;
@@ -119,5 +134,9 @@ li a:hover {
 
     .hamburger_menu{
         display:flex;
+    }
+    
+    .logo_va{
+        margin-left: 2rem;
     }
 }

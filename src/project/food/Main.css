@@ -19,6 +19,8 @@
   --maxWidth: 40rem;
   --fullWidth: 1170px;
 }
+
+
 .whole h2{
     text-align: center;
     margin-top: 2rem;
@@ -44,6 +46,10 @@ img{
     justify-items: center;
     width:100%;
     margin-bottom: 1.5rem;
+}
+
+.cardinner .btn{
+    float: right;
 }
 
 .card-main{
@@ -102,6 +108,7 @@ img{
 }
 
 
+
 @media(max-width:1000px)
 {
     .card-main{
@@ -127,6 +134,7 @@ img{
     .cardinner{
         width:320px
     }
+   
 }
 
 

@@ -53,7 +53,7 @@ body{
     margin-top: 20px;
     /* justify-items:center;   */
     grid-template-columns: 350px 350px;
-    
+    margin-bottom:1.5rem;
     justify-content:center;  
 }
 
@@ -72,6 +72,10 @@ body{
     justify-content:space-between;
     border-bottom:0.5px dotted gray;
     margin-left: 0px;
+}
+
+.item-info .btn{
+    float: right;
 }
 .price{
     color:#c59d5f;
@@ -111,6 +115,12 @@ body{
     .food-grid{
         grid-template-columns:350px;
     }
-
-
 }
+
+@media(max-width:470px)
+{
+    .filter-btn{
+        margin:0px
+    }
+}
+

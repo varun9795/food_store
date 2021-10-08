@@ -5,7 +5,7 @@ const products = [
         title: "Dhokla",
         category: "Breakfast",
         price: '150',
-        info: "I know once people get connected to real food, they never change back."
+        info: "South Indian Dish , a great option for healthy breakfast"
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ const products = [
         title: "Chole Bhature",
         category: "Breakfast",
         price: '110',
-        info: "I know once people get connected to real food, they never change back."
+        info: "Punjabi Dish,It is a combination of spicy chana masala and bhatura/puri"
     },
     {
         id: 3,

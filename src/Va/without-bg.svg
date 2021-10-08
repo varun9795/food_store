@@ -1,42 +1,8 @@
-import React, { useState ,useEffect} from 'react';
-import without_bg from '../../Va/without-bg.svg'
-import "./header.css";
-import {Link} from "react-router-dom";
-import { connect } from 'react-redux';
-
-
-
-const Header=({cartItems,click}) => {
-    const time= new Date().toLocaleTimeString();
-    const [ctime,setCtime]=useState(time);
-    const handler=()=>{
-        const time= new Date().toLocaleTimeString();
-        setCtime(time);
-    }
-    setInterval(handler, 1000);
-
-    const [len, setLen] = useState(0);
-    
-    useEffect(()=>{
-        let count = 0;
-        cartItems.forEach((item) => {
-           count+= item.qty;
-        })
-        setLen(count);
-    },[cartItems,len,setLen])
-
-    return <>
-        <section className="navbar-food">
-
-        <ul className="links">
-                
-        <span className="ctime">           
-                    <h4 >{ctime}</h4>
-        </span>
-            
-        <div className="logo_va">
-            {/* <img src={without_bg} style={{marginTop:5,marginBottom:5}}/> */}
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"  width="100.000000pt" height="70.000000pt"  viewBox="0 0 200.000000 150.000000"
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="164.000000pt" height="162.000000pt" viewBox="0 0 164.000000 162.000000"
  preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,162.000000) scale(0.100000,-0.100000)"
@@ -90,42 +56,3 @@ fill="#000000" stroke="none">
 -45 -12z"/>
 </g>
 </svg>
-        </div>
-        
-        <div className="upper-right">
-                
-        <div className="li-head">
-           
-            {/* <li><Link to="/cart">Recipes</Link></li>  */}
-           
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/menu">Menu</Link></li>
-            <li><Link to="/cart" className="cart_design">
-                <i className="fas fa-shopping-cart"></i>
-                Cart
-                <span className="cart_badge">{len}</span>
-            </Link></li>
-        </div>
-                
-       <div className="hamburger_menu" onClick={click}>
-                    <div></div>
-                    <div></div>
-
-                    <div></div>
-        
-        </div>
-
-        </div>
-        
-       
-        </ul>
-        </section>
-        </>
-}
-const mapStateToProps=state=>{
-    return{
-        cartItems:state.food.cartItems,
-    };
-}
-
-export default connect (mapStateToProps)(Header);

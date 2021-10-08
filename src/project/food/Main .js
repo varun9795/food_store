@@ -1,11 +1,12 @@
 import React, { useEffect} from 'react';
 import Caraousel from '../../Caraousel';
 import "./Main.css";
-import Header from './header';
-import Footer from './Footer';
+// import Footer from './Footer';
 import {useSelector,useDispatch,connect} from 'react-redux';
 import { addToCart } from '../../redux/Food/food-actions';
 import {getProducts as listProducts} from '../../redux/Food/productActions'
+
+
 
 
 
@@ -22,7 +23,6 @@ const Main = ({ addToCart }) => {
 
     return <>
       <div className="frame">
-        <Header/>
         <Caraousel/>
             <section className="whole">
                  <h2>COMBOS AND OFFERS</h2>
@@ -50,7 +50,7 @@ const Main = ({ addToCart }) => {
             </div>
 
         </section>
-            <Footer />
+            {/* <Footer /> */}
             </div>
         </>
 }

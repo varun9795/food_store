@@ -1,10 +1,10 @@
 import React, { useState,useEffect } from 'react';
 import {connect} from 'react-redux';
 import {removeFromCart} from './redux/Food/food-actions';
-import Header from './project/food/header';
+// import Header from './project/food/header';
 import "./cart.css"
-import Footer from './project/food/Footer'
-import { useDispatch, useSelector } from 'react-redux';
+// import Footer from './project/food/Footer'
+import { useSelector } from 'react-redux';
 import {useHistory} from "react-router-dom";
 
 const Cart = ({ removeFromCart }) => {
@@ -15,7 +15,7 @@ const Cart = ({ removeFromCart }) => {
     const [total, setTotal] = useState(0);
     const [len, setLen] = useState(0);
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     const cart = useSelector(state=>state.food);
     const { cartItems } = cart;
 
@@ -31,7 +31,6 @@ const Cart = ({ removeFromCart }) => {
     },[cartItems,total,len,setLen,setTotal])
     return <>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-        <Header />
         {
             len > 0 ?
                 <div className="cart">
@@ -91,8 +90,8 @@ const Cart = ({ removeFromCart }) => {
                             })
                         }
                         </table>
-                        </div>
-                
+                        {/* /* </div> */}
+                        </div> 
                         </div>
                     <div className="totalprice">
                         <div className="inner-total">
@@ -113,7 +112,7 @@ const Cart = ({ removeFromCart }) => {
                
             
 
-        <Footer />
+        {/* <Footer /> */}
         
     </>
 }

@@ -27,7 +27,6 @@ const Menu=({addToCart})=>{
         setItems(newItems);
     }
     return<>
-        <Header/>
         <section>
             <div className="page_heading">
                 <h1>Our Menu</h1>
