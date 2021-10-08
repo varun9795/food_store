@@ -10,7 +10,6 @@
     "data:import": "node backend/seederScript.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
-    
   },
   "keywords": [],
   "author": "",
