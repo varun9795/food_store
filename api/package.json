@@ -1,14 +1,16 @@
 {
-  "name": "PROJECT_REACT",
+  "name": "PROJECTREACT",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
-    "client": "cd .. && npm start ",
+    "client": "cd frontend && npm start ",
+    "data:import": "node backend/seederScript.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "data:import": "node backend/seederScript.js"
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
+    
   },
   "keywords": [],
   "author": "",

@@ -1,1 +1,1 @@
-web: cd api && npm run dev
+web:node api/backend/server.js
