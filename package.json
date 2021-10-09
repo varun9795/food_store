@@ -6,8 +6,8 @@
   "scripts": {
     "build":"cd frontend && npm run build",
     "install-client": "cd frontend && npm install",
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
+    "start": "node server.js",
+    "server": "nodemon server.js",
     "client": "cd frontend && npm start ",
     "data:import": "node backend/seederScript.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
