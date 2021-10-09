@@ -49,7 +49,7 @@ const Cart = ({ removeFromCart }) => {
                             <div class="py-2 text-uppercase">Price</div>
                         </th>
                         <th scope="col" class="border-0 bg-light">
-                            <div class="py-2 text-uppercase">Quantity</div>
+                            <div class="py-2 text-uppercase">Qty</div>
                         </th>
                         <th scope="col" class="border-0 bg-light">
                             <div class="py-2 text-uppercase">Subtotal</div>
