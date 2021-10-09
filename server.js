@@ -14,10 +14,8 @@ const PORT = process.env.PORT || 5000;
 
 
 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('/frontend/build'));
-}
 
+app.use(express.static(path.resolve(__dirname, "./frontend/build")));
 app.get("/*", function (request, response) {
   response.sendFile(path.resolve(__dirname, "./frontend/build", "index.html"));
 });
