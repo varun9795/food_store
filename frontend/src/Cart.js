@@ -37,7 +37,7 @@ const Cart = ({ removeFromCart }) => {
                     <section className="heading">
                         <h1>Items in your Cart({len}) </h1>
                     </section>
-                    <div className="col-lg-12 p-5 bg-white rounded shadow-sm mb-4">
+                    <div className="col-lg-12 p-3 bg-white rounded shadow-sm mb-4">
                     <div className="table-responsive">
                         <table class="table">
                          <thead>
