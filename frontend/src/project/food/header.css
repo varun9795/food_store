@@ -29,6 +29,9 @@ ul{
     font-style: italic;
 }
 
+.ctime{
+    margin-left:2px;
+}
 
 li a {
     display: block;
