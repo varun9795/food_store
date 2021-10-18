@@ -1,12 +1,21 @@
 import React, { useState ,useEffect} from 'react';
 import without_bg from '../../Va/without-bg.svg'
 import "./header.css";
-import {Link} from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 import { connect } from 'react-redux';
+import { useAlert } from "react-alert";
+import { logout } from "../../redux/User/userAction";
+import { useDispatch} from "react-redux";
+
 
 
 
 const Header=({cartItems,click}) => {
+
+    const history = useHistory();
+    const alert = useAlert();
+    const dispatch = useDispatch();
+
     const time= new Date().toLocaleTimeString();
     const [ctime,setCtime]=useState(time);
     const handler=()=>{
@@ -16,6 +25,18 @@ const Header=({cartItems,click}) => {
     setInterval(handler, 1000);
 
     const [len, setLen] = useState(0);
+
+    function logoutUser(){
+        // localStorage.clear();
+        window.location.href = '/';
+    }
+
+    // function logoutUser(){
+    //     // e.preventDefault();
+    //     alert.success("Logout Successfully");
+    //     history.push('/')
+    //     dispatch(logout());
+    // }
     
     useEffect(()=>{
         let count = 0;
@@ -23,7 +44,7 @@ const Header=({cartItems,click}) => {
            count+= item.qty;
         })
         setLen(count);
-    },[cartItems,len,setLen])
+    },[cartItems,len,setLen,dispatch])
 
     return <>
         <section className="navbar-food">
@@ -98,13 +119,17 @@ fill="#000000" stroke="none">
            
             {/* <li><Link to="/cart">Recipes</Link></li>  */}
            
-            <li><Link to="/">Home</Link></li>
+            <li><Link to="/Home">Home</Link></li>
             <li><Link to="/menu">Menu</Link></li>
             <li><Link to="/cart" className="cart_design">
                 <i className="fas fa-shopping-cart"></i>
                 Cart
                 <span className="cart_badge">{len}</span>
             </Link></li>
+            <li>
+            {/* <Link onClick={()=>logoutUser()}>Logout</Link> */}
+            <a href="#" onClick={()=>logoutUser()}>LOGOUT</a>
+            </li>
         </div>
                 
        <div className="hamburger_menu" onClick={click}>

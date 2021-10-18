@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 const {getAllProducts,getProductById}=require("../controller/productController")
+const { isAuthenticatedUser} = require("../middleware/auth");
 
-router.get('/',getAllProducts)
+router.route('/Home').get(isAuthenticatedUser,getAllProducts)
 
-router.get('/:id', getProductById)
+router.route('/:id').get(isAuthenticatedUser,getProductById)
 
 module.exports = router;

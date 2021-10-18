@@ -6,19 +6,22 @@ import * as actionTypes from "./food-ProductTypes";
         case actionTypes.GET_PRODUCTS_REQUEST:
             return {
                 loading: true,
-                products: []
+                products: [],
+                isAuthenticated:false,
             }
         
         case actionTypes.GET_PRODUCTS_SUCCESS:
             return {
                 loading: false,
-                products: action.payload
+                products: action.payload,
+                isAuthenticated:true,
             }
         
         case actionTypes.GET_PRODUCTS_FAIL:
             return {
                 loading: false,
                 error: action.payload,
+                isAuthenticated:false,
             };
         
         default:

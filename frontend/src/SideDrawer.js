@@ -10,7 +10,7 @@ const SideDrawer=({show,click})=>{
      <div className={sideDrawerClass.join(" ")}>
      <ul className="SideDrawer_links" onClick={click} style={{paddingLeft:0}}>
          <li>
-             <Link to='/'>
+             <Link to='/Home'>
              Home
              </Link>
          </li>
@@ -26,6 +26,11 @@ const SideDrawer=({show,click})=>{
                  Cart
              
          </Link>
+         </li>
+         <li>
+             <a href='/'>
+             Logout
+             </a>
          </li>
      </ul>
      </div>

@@ -13,7 +13,9 @@ import {getProducts as listProducts} from '../../redux/Food/productActions'
 const Main = ({ addToCart }) => {
     
     const dispatch = useDispatch();
+    console.log("in home")
     const getProducts = useSelector(state => state.getProducts);
+    console.log(getProducts)
      
     const { products, loading, error } = getProducts;
     
