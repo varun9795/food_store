@@ -26,8 +26,9 @@ const Header=({cartItems,click}) => {
 
     const [len, setLen] = useState(0);
 
-    function logoutUser(){
-        // localStorage.clear();
+    function logoutUser() {
+        alert.success("Logout Successfully");
+        dispatch(logout());
         window.location.href = '/';
     }
 

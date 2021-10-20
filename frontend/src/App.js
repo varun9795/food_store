@@ -6,7 +6,8 @@ import Header from './project/food/header'
 import Footer from './project/food/Footer';
 import Main from './project/food/Main ';
 import LoginSignUp from './loginSignUp';
-import {Route,Switch,useLocation} from "react-router-dom";
+import { Route, Switch, useLocation } from "react-router-dom";
+import ProtectedRoute from "./protectedRoute";
 
 import BackDrop from './BackDrop';
 import SideDrawer from './SideDrawer';
@@ -23,14 +24,10 @@ const App=()=>{
     <SideDrawer show={sideToggle} click={()=>setSideToggle(false)}/>
     <BackDrop show={sideToggle} click={()=>setSideToggle(false)}/>
     <Switch>
-        <Route path='/'  exact>
-        <LoginSignUp/></Route>
-        <Route path='/Home' exact>
-        <Main/></Route>
-        <Route path='/menu' exact> 
-        <Menu/></Route>
-        <Route path='/cart' exact>
-        <Cart/></Route>
+        <Route  exact path='/'component={LoginSignUp}/>
+        <ProtectedRoute exact path='/Home' component={Main}/>
+        <ProtectedRoute exact path='/menu' component={Menu}/>
+        <ProtectedRoute exact path='/cart' component={Cart}/>
     </Switch>  
     <Footer/>  
     </>
