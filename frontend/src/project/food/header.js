@@ -5,7 +5,7 @@ import { Link,useHistory } from "react-router-dom";
 import { connect } from 'react-redux';
 import { useAlert } from "react-alert";
 import { logout } from "../../redux/User/userAction";
-import { useDispatch} from "react-redux";
+import { useDispatch,useSelector} from "react-redux";
 
 
 
@@ -15,6 +15,10 @@ const Header=({cartItems,click}) => {
     const history = useHistory();
     const alert = useAlert();
     const dispatch = useDispatch();
+
+    const {isAuthenticated}=useSelector((state)=>state.user)
+
+    console.log(isAuthenticated,"is true")
 
     const time= new Date().toLocaleTimeString();
     const [ctime,setCtime]=useState(time);
@@ -32,12 +36,23 @@ const Header=({cartItems,click}) => {
         window.location.href = '/';
     }
 
+    const loginUser=() =>{
+        window.location.href = '/login';
+        alert.success("Logout Successfully");
+    }
+
     // function logoutUser(){
     //     // e.preventDefault();
     //     alert.success("Logout Successfully");
     //     history.push('/')
     //     dispatch(logout());
     // }
+
+    const solve=()=>{
+        if(!isAuthenticated){
+          alert.success("login to access")
+        }
+    }
     
     useEffect(()=>{
         let count = 0;
@@ -121,15 +136,15 @@ fill="#000000" stroke="none">
             {/* <li><Link to="/cart">Recipes</Link></li>  */}
            
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/menu">Menu</Link></li>
-            <li><Link to="/cart" className="cart_design">
+            <li><Link onClick={solve} to="/menu">Menu</Link></li>
+            <li><Link onClick={solve} to="/cart" className="cart_design">
                 <i className="fas fa-shopping-cart"></i>
                 Cart
                 <span className="cart_badge">{len}</span>
             </Link></li>
             <li>
             {/* <Link onClick={()=>logoutUser()}>Logout</Link> */}
-            <a href="#" onClick={()=>logoutUser()}>LOGOUT</a>
+           { isAuthenticated?<a href="#" onClick={()=>logoutUser()}>Logout</a>:<a href="#" onClick={()=>loginUser()}>Login</a>}
             </li>
         </div>
                 
