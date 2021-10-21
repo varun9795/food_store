@@ -20,8 +20,8 @@ const App=()=>{
     {/* {
         location.pathname!=='/' && <Header click={()=>setSideToggle(true)}/>
     } */}
-        {/* <Header click={()=>setSideToggle(true)}/> */}
-        <Header/>
+        <Header click={()=>setSideToggle(true)}/>
+        {/* <Header/> */}
     <SideDrawer show={sideToggle} click={()=>setSideToggle(false)}/>
     <BackDrop show={sideToggle} click={()=>setSideToggle(false)}/>
     <Switch>

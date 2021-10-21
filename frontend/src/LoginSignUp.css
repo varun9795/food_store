@@ -126,13 +126,13 @@
   transform: translateX(100%);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 485px) {
   .LoginSignUpContainer {
     height:70vh
   }
   .LoginSignUpBox {
-    width: 35vw;
-    height: 55vh;
+    width: 50vw;
+    height: 40vh;
   }
   .login_signUp_toggle {
     height: 4vmax;

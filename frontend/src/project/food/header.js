@@ -144,7 +144,7 @@ fill="#000000" stroke="none">
             </Link></li>
             <li>
             {/* <Link onClick={()=>logoutUser()}>Logout</Link> */}
-           { isAuthenticated?<a href="#" onClick={()=>logoutUser()}>Logout</a>:<a href="#" onClick={()=>loginUser()}>Login</a>}
+           { isAuthenticated?<a href="#" onClick={()=>logoutUser()}><i class="fas fa-user-check"></i></a>:<a href="#" onClick={()=>loginUser()}><i class="fas fa-user-times"></i></a>}
             </li>
         </div>
                 
