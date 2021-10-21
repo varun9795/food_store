@@ -58,7 +58,7 @@ const LoginSignUp = () => {
 
     if (isAuthenticated) {
       console.log("authenticated")
-      history.push('/Home');
+      history.push('/');
     }
   }, [dispatch, error, alert, isAuthenticated]);
 

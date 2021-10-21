@@ -120,7 +120,7 @@ fill="#000000" stroke="none">
            
             {/* <li><Link to="/cart">Recipes</Link></li>  */}
            
-            <li><Link to="/Home">Home</Link></li>
+            <li><Link to="/">Home</Link></li>
             <li><Link to="/menu">Menu</Link></li>
             <li><Link to="/cart" className="cart_design">
                 <i className="fas fa-shopping-cart"></i>
