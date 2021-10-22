@@ -1,16 +1,18 @@
 import React, { useState,useEffect } from 'react';
 import {connect} from 'react-redux';
-import {removeFromCart} from './redux/Food/food-actions';
+import {removeFromCart,addToCart,decreaseQTY} from './redux/Food/food-actions';
 // import Header from './project/food/header';
 import "./cart.css"
 // import Footer from './project/food/Footer'
 import { useSelector } from 'react-redux';
 import {useHistory} from "react-router-dom";
+import { useDispatch } from 'react-redux';
 
 const Cart = ({ removeFromCart }) => {
     
     
   const history = useHistory();
+  const dispatch=useDispatch();
 
     const [total, setTotal] = useState(0);
     const [len, setLen] = useState(0);
@@ -85,10 +87,12 @@ const Cart = ({ removeFromCart }) => {
                                   </th>
                                     <td class="border-0 align-middle">
                                         <h4>Rs.{cItem.price}</h4></td>
-                                            <td class="border-0 align-middle" >
-                                              <h4>{cItem.qty}</h4>
-                                              {/* <button onChange={increaseQty(cItem._id,qty)}>increase qty</button>
-                                              <button onChange={decreaseQty(cItem._id,qty)}>decrease qty</button> */}
+                                            <td class="align-middle border-0 " >
+                                            <div class="d-flex flex-row align-self-center">
+                                              <button className="btn" onClick={()=>dispatch(addToCart(cItem.id))}>+</button>
+                                              <button className="btn">{cItem.qty}</button>
+                                              <button className="btn" onClick={()=>cItem.qty>1?dispatch(decreaseQTY(cItem.id)):removeFromCart(cItem.id)}>-</button>
+                                              </div>
                                              </td>
                                             <td class="border-0 align-middle">
                                                 <h4>Rs.{cItem.price * cItem.qty}</h4>
@@ -130,11 +134,23 @@ const Cart = ({ removeFromCart }) => {
     </>
 }
 
-const mapDispatchToProps=dispatch=>{
+let mapDispatchToProps=dispatch=>{
     return{
         removeFromCart:(id)=>dispatch(removeFromCart(id)),
     }
 }
+
+// mapDispatchToProps=dispatch=>{
+//     return{
+//         addToCart:(id)=>dispatch(addToCart(id)),
+//     }
+// }
+
+// mapDispatchToProps=dispatch=>{
+//     return{
+//         decreaseQTY:(id)=>dispatch(decreaseQTY(id)),
+//     }
+// }
 // const mapStateToProps=state=>{
 //     return{
 //         cartItems: state.food.cartItems,
