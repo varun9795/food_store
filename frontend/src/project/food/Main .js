@@ -5,12 +5,17 @@ import "./Main.css";
 import {useSelector,useDispatch,connect} from 'react-redux';
 import { addToCart } from '../../redux/Food/food-actions';
 import {getProducts as listProducts} from '../../redux/Food/productActions'
+import { useAlert } from 'react-alert';
 
 
 
 
 
 const Main = ({ addToCart }) => {
+
+    const alert=useAlert();
+
+    const {isAuthenticated}=useSelector(state=>state.user)
     
     const dispatch = useDispatch();
     console.log("in home")
@@ -43,7 +48,7 @@ const Main = ({ addToCart }) => {
                                  <h2 className="price">Rs.{price}</h2>
                                  </header>
                                  <h5>{info}</h5>
-                                    <button className="btn" onClick={() => { addToCart(_id) }}> ADD TO CART</button>
+                                    <button className="btn" onClick={() =>!isAuthenticated?alert.success("Login to acess") :addToCart(_id) }> ADD TO CART</button>
                     
                         </div>
                         </>

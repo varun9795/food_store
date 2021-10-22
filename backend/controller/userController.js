@@ -33,8 +33,7 @@ loginUser=catchAsyncErrors(async(req,res,next)=>{
         return next(new ErrorHandler("invalid email or password",401));
     }
 
-    const isPasswordMatched=user.comparePassword(password);
-    if(!isPasswordMatched){
+    if(user.password!==password){
         return next(new ErrorHandler("invalid email or password",401));
     }
 

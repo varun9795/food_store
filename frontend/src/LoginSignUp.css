@@ -126,6 +126,47 @@
   transform: translateX(100%);
 }
 
+@media screen and (max-width: 700px) {
+  .LoginSignUpContainer {
+    height:70vh
+  }
+  .LoginSignUpBox {
+    width: 30vw;
+    height: 60vh;
+  }
+  .login_signUp_toggle {
+    height: 4vmax;
+  }
+  .login_signUp_toggle > p {
+    font: 300 1.5vmax "Roboto";
+  }
+
+  .loginForm,
+  .signUpForm {
+    padding: 4vmax;
+  }
+
+  .loginForm > div > input,
+  .signUpForm > div > input {
+    padding: 1vmax 2vmax;
+    font: 300 1.25vmax cursive;
+  }
+
+ 
+
+  .loginForm > a {
+    font: 500 1.8vmax "Gill Sans";
+  }
+
+ 
+
+  .loginBtn,
+  .signUpBtn {
+    font: 300 1.5vmax "Roboto";
+    padding: 1.5vmax;
+  }
+}
+
 @media screen and (max-width: 485px) {
   .LoginSignUpContainer {
     height:70vh

@@ -40,9 +40,9 @@ userSchema.methods.getJWTToken=function(){
 }
 
 //compare password
-userSchema.methods.comparePassword=async function(enteredPassword){
-    // return await bcrypt.compare(enteredPassword,this.password);
-    return true;
-}
+// userSchema.methods.comparePassword=async function(enteredPassword){
+//     // return await bcrypt.compare(enteredPassword,this.password);
+//     return true;
+// }
 
 module.exports=mongoose.model("User",userSchema);

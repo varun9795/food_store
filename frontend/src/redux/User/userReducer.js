@@ -34,12 +34,13 @@ const userReducer = (state = { user: {} }, action) => {
             };
           case LOGIN_FAIL:
           case REGISTER_USER_FAIL:
+            console.log(action.payload)
             return {
               ...state,
               loading: false,
               isAuthenticated: false,
               user: null,
-              error: action.payload,
+              error: "Invalid Email or Password",
             };
       
           case LOGOUT_FAIL:

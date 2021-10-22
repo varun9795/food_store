@@ -14,10 +14,20 @@ const Cart = ({ removeFromCart }) => {
 
     const [total, setTotal] = useState(0);
     const [len, setLen] = useState(0);
+    // const [qty,setQty]=useState("")
 
     // const dispatch = useDispatch();
     const cart = useSelector(state=>state.food);
     const { cartItems } = cart;
+
+    // const increaseQty=(id,pqty)=>{
+    //     cartItems.map((prod) => prod.id ===id ? {...prod, qty: prod.qty + 1 } : prod)
+    //     setQty(pqty+1);
+    // }
+
+    // const decreaseQty=(id)=>{
+    //     cartItems.map((prod) => prod.id ===id ? {...prod, qty: prod.qty - 1 } : prod)
+    // }
 
     useEffect(()=>{
         let price = 0;
@@ -28,6 +38,7 @@ const Cart = ({ removeFromCart }) => {
         })
         setTotal(price);
         setLen(count);
+        // localStorage.setItem('cart',JSON.stringify(getState().food.cartItems))
     },[cartItems,total,len,setLen,setTotal])
     return <>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
@@ -60,7 +71,7 @@ const Cart = ({ removeFromCart }) => {
                         </tr>
                     </thead>
                      {
-                            cartItems.map((cItem) => {
+                            cartItems.map((cItem) => { 
                         return <>
                         <tbody>
                                 <tr>
@@ -76,6 +87,8 @@ const Cart = ({ removeFromCart }) => {
                                         <h4>Rs.{cItem.price}</h4></td>
                                             <td class="border-0 align-middle" >
                                               <h4>{cItem.qty}</h4>
+                                              {/* <button onChange={increaseQty(cItem._id,qty)}>increase qty</button>
+                                              <button onChange={decreaseQty(cItem._id,qty)}>decrease qty</button> */}
                                              </td>
                                             <td class="border-0 align-middle">
                                                 <h4>Rs.{cItem.price * cItem.qty}</h4>

@@ -33,12 +33,13 @@ const Header=({cartItems,click}) => {
     function logoutUser() {
         alert.success("Logout Successfully");
         dispatch(logout());
+        localStorage.clear();
         window.location.href = '/';
     }
 
     const loginUser=() =>{
         window.location.href = '/login';
-        alert.success("Logout Successfully");
+        alert.success("Welcome to Login/Register page");
     }
 
     // function logoutUser(){

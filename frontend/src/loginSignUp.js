@@ -57,6 +57,7 @@ const LoginSignUp = () => {
     }
 
     if (isAuthenticated) {
+      alert.success("Welcome To Tasty Bites")
       console.log("authenticated")
       history.push('/');
     }
