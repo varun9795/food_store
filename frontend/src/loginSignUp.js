@@ -2,9 +2,9 @@ import React, { Fragment, useRef, useState, useEffect } from "react";
 import "./LoginSignUp.css";
 // import Loader from "../layout/Loader/Loader";
 import { Link ,useHistory} from "react-router-dom";
-// import MailOutlineIcon from "@material-ui/icons/MailOutline";
-// import LockOpenIcon from "@material-ui/icons/LockOpen";
-// import FaceIcon from "@material-ui/icons/Face";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import LockOpenIcon from "@material-ui/icons/LockOpen";
+import FaceIcon from "@material-ui/icons/Face";
 import { useDispatch, useSelector } from "react-redux";
 import { clearErrors, login, register } from "./redux/User/userAction";
 import { useAlert } from "react-alert";
@@ -97,7 +97,7 @@ const LoginSignUp = () => {
               </div>
               <form className="loginForm" ref={loginTab} onSubmit={loginSubmit}>
                 <div className="loginEmail">
-                  {/* <MailOutlineIcon /> */}
+                  <MailOutlineIcon />
                   <input
                     type="email"
                     placeholder="Email"
@@ -107,7 +107,7 @@ const LoginSignUp = () => {
                   />
                 </div>
                 <div className="loginPassword">
-                  {/* <LockOpenIcon /> */}
+                  <LockOpenIcon />
                   <input
                     type="password"
                     placeholder="Password"
@@ -126,7 +126,7 @@ const LoginSignUp = () => {
                 onSubmit={registerSubmit}
               >
                 <div className="signUpName">
-                  {/* <FaceIcon /> */}
+                  <FaceIcon />
                   <input
                     type="text"
                     placeholder="Name"
@@ -137,7 +137,7 @@ const LoginSignUp = () => {
                   />
                 </div>
                 <div className="signUpEmail">
-                  {/* <MailOutlineIcon /> */}
+                  <MailOutlineIcon />
                   <input
                     type="email"
                     placeholder="Email"
@@ -148,7 +148,7 @@ const LoginSignUp = () => {
                   />
                 </div>
                 <div className="signUpPassword">
-                  {/* <LockOpenIcon /> */}
+                  <LockOpenIcon />
                   <input
                     type="password"
                     placeholder="Password"
