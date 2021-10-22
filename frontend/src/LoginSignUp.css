@@ -57,6 +57,14 @@
   transform: translateY(-100%) translateX(-100vmax);
 }
 
+.loginForm > div > svg,
+.signUpForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+  color: rgba(0, 0, 0, 0.623);
+}
+
 .loginForm > div,
 .signUpForm > div {
   display: flex;
@@ -126,13 +134,13 @@
   transform: translateX(100%);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .LoginSignUpContainer {
     height:70vh
   }
   .LoginSignUpBox {
     width: 30vw;
-    height: 60vh;
+    height: 50vh;
   }
   .login_signUp_toggle {
     height: 4vmax;
