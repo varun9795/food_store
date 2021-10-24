@@ -192,6 +192,15 @@ span h4{
    margin-top:50px;
 } */
 
+.butn{
+  border-color:#2C2E43 ;
+  font-weight: bolder;
+  padding: 0.25rem;
+  font-size: 1.1rem;
+  margin-right:0.5px;
+
+}
+
 
 .inner-total{
   display: block;

@@ -50,7 +50,7 @@ const Cart = ({ removeFromCart }) => {
                     <section className="heading">
                         <h1>Items in your Cart({len}) </h1>
                     </section>
-                    <div className="col-lg-12 p-3 bg-white rounded shadow-sm mb-4">
+                    <div className="col-lg-12 p-md-3 bg-white rounded shadow-sm mb-4">
                     <div className="table-responsive">
                         <table class="table">
                          <thead>
@@ -62,7 +62,7 @@ const Cart = ({ removeFromCart }) => {
                             <div class="py-2 text-uppercase">Price</div>
                         </th>
                         <th scope="col" class="border-0 bg-light">
-                            <div class="py-2 text-uppercase">Qty</div>
+                            <div class="py-2 text-uppercase">Quantity</div>
                         </th>
                         <th scope="col" class="border-0 bg-light">
                             <div class="py-2 text-uppercase">Subtotal</div>
@@ -88,10 +88,10 @@ const Cart = ({ removeFromCart }) => {
                                     <td class="border-0 align-middle">
                                         <h4>Rs.{cItem.price}</h4></td>
                                             <td class="align-middle border-0 " >
-                                            <div class="d-flex flex-row align-self-center">
-                                              <button className="btn" onClick={()=>dispatch(addToCart(cItem.id))}>+</button>
-                                              <button className="btn">{cItem.qty}</button>
-                                              <button className="btn" onClick={()=>cItem.qty>1?dispatch(decreaseQTY(cItem.id)):removeFromCart(cItem.id)}>-</button>
+                                            <div class="d-flex flex-row">
+                                              <button className="butn" onClick={()=>dispatch(addToCart(cItem.id))}>+</button>
+                                              <button className="butn">{cItem.qty}</button>
+                                              <button className="butn" onClick={()=>cItem.qty>1?dispatch(decreaseQTY(cItem.id)):removeFromCart(cItem.id)}>-</button>
                                               </div>
                                              </td>
                                             <td class="border-0 align-middle">

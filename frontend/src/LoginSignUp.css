@@ -60,8 +60,8 @@
 .loginForm > div > svg,
 .signUpForm > div > svg {
   position: absolute;
-  transform: translateX(1vmax);
-  font-size: 1.6vmax;
+  transform: translateX(0.75vmax);
+  font-size: 1.5vmax;
   color: rgba(0, 0, 0, 0.623);
 }
 
@@ -134,16 +134,16 @@
   transform: translateX(100%);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .LoginSignUpContainer {
     height:70vh
   }
   .LoginSignUpBox {
-    width: 30vw;
+    width: 40vw;
     height: 50vh;
   }
   .login_signUp_toggle {
-    height: 4vmax;
+    height: 3vmax;
   }
   .login_signUp_toggle > p {
     font: 300 1.5vmax "Roboto";
@@ -171,7 +171,7 @@
   .loginBtn,
   .signUpBtn {
     font: 300 1.5vmax "Roboto";
-    padding: 1.5vmax;
+    padding: 0.8vmax;
   }
 }
 
