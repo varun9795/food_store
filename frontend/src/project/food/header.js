@@ -39,7 +39,6 @@ const Header=({cartItems,click}) => {
 
     const loginUser=() =>{
         window.location.href = '/login';
-        alert.success("Welcome to Login/Register page");
     }
 
     // function logoutUser(){
@@ -51,7 +50,7 @@ const Header=({cartItems,click}) => {
 
     const solve=()=>{
         if(!isAuthenticated){
-          alert.success("login to access")
+          alert.error("login to access")
         }
     }
     

@@ -17,12 +17,11 @@ const SideDrawer=({show,click})=>{
 
     const loginUser=() =>{
         window.location.href = '/login';
-        alert.success("Logout Successfully");
     }
 
     const solve=()=>{
         if(!isAuthenticated){
-          alert.success("login to access")
+          alert.success("Login to access")
         }
     }
     

@@ -26,6 +26,15 @@ const userReducer = (state = initialState, action) => {
               isAuthenticated: false,
             };
           case LOGIN_SUCCESS:
+             localStorage.setItem('token', action.payload.token);
+            return {
+              ...state,
+              loading: false,
+              isAuthenticated: true,
+              user: action.payload,
+              message:"Login Successfully"
+            };
+      
           case REGISTER_USER_SUCCESS:
             localStorage.setItem('token', action.payload.token);
             return {
@@ -33,6 +42,7 @@ const userReducer = (state = initialState, action) => {
               loading: false,
               isAuthenticated: true,
               user: action.payload,
+              message:"User Registered Successfully!!"
             };
       
           case LOGOUT_SUCCESS:

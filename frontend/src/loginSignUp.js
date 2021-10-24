@@ -15,7 +15,7 @@ const LoginSignUp = () => {
   const dispatch = useDispatch();
   const alert = useAlert();
 
-  const { error, loading, isAuthenticated } = useSelector(
+  const { message,error, loading, isAuthenticated } = useSelector(
     (state) => state.user
   );
 
@@ -57,6 +57,7 @@ const LoginSignUp = () => {
     }
 
     if (isAuthenticated) {
+      alert.success(message)
       alert.success("Welcome To Tasty Bites")
       console.log("authenticated")
       history.push('/');

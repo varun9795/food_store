@@ -69,6 +69,7 @@
 .signUpForm > div {
   display: flex;
   width: 100%;
+  column-gap: 1vmax;
   align-items: center;
 }
 .loginForm > div > input,
@@ -139,8 +140,8 @@
     height:70vh
   }
   .LoginSignUpBox {
-    width: 40vw;
-    height: 50vh;
+    /* width: 40vw; */
+    height: 40vh;
   }
   .login_signUp_toggle {
     height: 3vmax;
@@ -152,13 +153,24 @@
   .loginForm,
   .signUpForm {
     padding: 4vmax;
+    justify-content: space-evenly;
   }
 
   .loginForm > div > input,
   .signUpForm > div > input {
     padding: 1vmax 2vmax;
+    padding-right: 1vmax;
     font: 300 1.25vmax cursive;
   }
+
+  .loginForm > div,
+.signUpForm > div {
+  display: flex;
+  width: 100%;
+  column-gap: 1vmax;
+  align-items: center;
+}
+  
 
  
 
@@ -177,10 +189,10 @@
 
 @media screen and (max-width: 485px) {
   .LoginSignUpContainer {
-    height:70vh
+    height:60vh
   }
   .LoginSignUpBox {
-    width: 50vw;
+    width: 40vw;
     height: 40vh;
   }
   .login_signUp_toggle {
@@ -193,11 +205,13 @@
   .loginForm,
   .signUpForm {
     padding: 4vmax;
+    justify-content: space-evenly;
   }
 
   .loginForm > div > input,
   .signUpForm > div > input {
     padding: 1vmax 2vmax;
+    padding-right: 1vmax;
     font: 300 1.25vmax cursive;
   }
 

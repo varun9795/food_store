@@ -48,7 +48,7 @@ const Main = ({ addToCart }) => {
                                  <h2 className="price">Rs.{price}</h2>
                                  </header>
                                  <h5>{info}</h5>
-                                    <button className="btn" onClick={() =>!isAuthenticated?alert.success("Login to acess") :addToCart(_id) }> ADD TO CART</button>
+                                    <button className="btn" onClick={() =>!isAuthenticated?alert.error("Login to acess") :addToCart(_id) }> ADD TO CART</button>
                     
                         </div>
                         </>
